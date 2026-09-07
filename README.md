@@ -1,3 +1,5 @@
+<img width="320" height="180" alt="i-use-arch-btw-arch-linux" src="https://github.com/user-attachments/assets/ca754320-4fe7-4798-b05c-e46a949aa8ba" />
+
 # SURYA'S ARCH LINUX
 
 > **My personal Arch Linux setup — built, configured, customized, and maintained from scratch.**
@@ -7,6 +9,8 @@ A complete collection of my **Arch Linux configuration files, desktop environmen
 This repository documents my Linux journey and serves as a **backup, reference, and reproducible setup** for my personal Arch environment.
 
 <img width="112" height="112" alt="linux-penguin-cute" src="https://github.com/user-attachments/assets/c5e43530-923b-45a7-924c-7c61e76d1332" />
+
+<img width="112" height="112" alt="archpepe" src="https://github.com/user-attachments/assets/eb2a93e7-1932-47ae-a91b-426e3f34c5bd" />
 
 ---
 
