@@ -361,3 +361,7 @@ Feel free to explore the configuration and take inspiration from anything that h
 This repository contains personal configuration files.
 
 You are free to study, modify, and adapt the configurations for your own setup.
+
+
+<img width="498" height="373" alt="linus-linus-benedict-torvalds" src="https://github.com/user-attachments/assets/3036bf00-2150-4593-9f4c-fcce997a014c" />
+
