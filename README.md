@@ -1,4 +1,6 @@
-<img width="320" height="180" alt="i-use-arch-btw-arch-linux" src="https://github.com/user-attachments/assets/ca754320-4fe7-4798-b05c-e46a949aa8ba" />
+<p align="center">
+  <img width="320" height="180" alt="i-use-arch-btw-arch-linux" src="https://github.com/user-attachments/assets/ca754320-4fe7-4798-b05c-e46a949aa8ba" />
+</p>
 
 # SURYA'S ARCH LINUX
 
