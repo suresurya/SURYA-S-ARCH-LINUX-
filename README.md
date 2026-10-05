@@ -1,357 +1,201 @@
 # SURYA'S ARCH LINUX
 
-> **My personal Arch Linux setup — built, configured, customized, and maintained from scratch.**
+> My personal Arch Linux configuration repository.
 
-A complete collection of my **Arch Linux configuration files, desktop environment setup, themes, scripts, tools, and system customizations**.
-
-This repository documents my Linux journey and serves as a **backup, reference, and reproducible setup** for my personal Arch environment.
-
-<img width="112" height="112" alt="linux-penguin-cute" src="https://github.com/user-attachments/assets/c5e43530-923b-45a7-924c-7c61e76d1332" />
+This repository contains the configuration files I use to shape my Arch Linux environment. It currently focuses on shell and terminal tooling, with room to expand over time as more parts of my setup are organized and tracked here.
 
 ---
 
-##  System
+## Overview
 
-| Component           | Setup            |
-| ------------------- | ---------------- |
-| **OS**              | Arch Linux       |
-| **Desktop**         | Hyprland         |
-| **Display Manager** | SDDM             |
-| **Status Bar**      | Waybar           |
-| **Terminal**        | Kitty            |
-| **Shell**           | Zsh / Bash       |
-| **Launcher**        | Rofi             |
-| **Wallpaper**       | awww             |
-| **Notifications**   | Dunst            |
-| **Editor**          | Neovim / VS Code |
-| **Version Control** | Git + GitHub     |
+This repo serves as a:
+- backup of my personal configuration files
+- reference for rebuilding or refining my setup
+- record of my Linux customization journey
 
-> This configuration evolves continuously as I learn, experiment, break things, fix them, and make the system better.
+The current tracked configurations include:
+- `zsh` shell configuration
+- `btop` system monitor configuration
+- `cava` audio visualizer configuration
 
 ---
 
-#  Repository Structure
+## Current Repository Structure
 
 ```text
 SURYA'S ARCH LINUX/
-│
-├── hypr/                  # Hyprland configuration
-├── waybar/                # Waybar configuration
-├── kitty/                 # Kitty terminal configuration
-├── rofi/                  # Application launcher configuration
-├── dunst/                 # Notification configuration
-├── awww/                  # Wallpaper configuration/scripts
-├── sddm/                  # Display manager configuration
-├── scripts/               # Personal utility scripts
-│
-├── system/                # System-level configuration
-│
+├── .zshrc
 ├── README.md
-└── ...
+├── btop/
+│   └── btop.conf
+└── cava/
+    ├── config
+    └── shaders/
+        ├── bar_spectrum.frag
+        ├── eye_of_phi.frag
+        ├── northern_lights.frag
+        ├── pass_through.vert
+        ├── spectrogram.frag
+        └── winamp_line_style_spectrum.frag
 ```
 
-Folders will be added gradually as the system evolves.
+---
+
+## System Snapshot
+
+| Component | Choice |
+| --- | --- |
+| OS | Arch Linux |
+| Shell | Zsh / Bash |
+| Editor | Neovim / VS Code |
+| Monitoring | btop |
+| Audio Visualization | cava |
+| Version Control | Git + GitHub |
+
+> This setup is continuously evolving as I learn, simplify, and improve my workflow.
 
 ---
 
-#  Hyprland
+## Configuration Details
 
-My main desktop environment is **Hyprland**, a dynamic tiling Wayland compositor.
+### `.zshrc`
+My shell configuration includes:
+- Oh My Zsh
+- Powerlevel10k prompt
+- Git plugin
+- autosuggestions and syntax highlighting
+- history tuning
+- navigation, Git, Maven, Gradle, and Neovim aliases
 
-The Hyprland configuration contains my:
+### `btop/btop.conf`
+This contains my `btop` preferences for:
+- layout presets
+- graph style
+- CPU, memory, network, and process display
+- temperature, battery, and disk visibility
 
-* Window rules
-* Keybindings
-* Animations
-* Gaps and borders
-* Workspaces
-* Startup applications
-* Monitor configuration
-* Layout settings
-* Wallpaper integration
-* Lock screen
-* System scripts
-* Appearance customization
+### `cava/config`
+This contains my `cava` configuration for:
+- audio input handling
+- output mode
+- color and gradient settings
+- optional GLSL shader support
+
+### `cava/shaders/`
+This directory stores shader files used by `cava` when running in `sdl_glsl` mode.
 
 ---
 
-#  Desktop Setup
+## Installation / Usage
 
-The goal of this setup is to keep the desktop:
+This is primarily a personal config archive, but you can reuse parts of it selectively.
 
-```text
-Minimal
-   +
-Fast
-   +
-Functional
-   +
-Beautiful
-   +
-Keyboard-focused
+### Clone the repository
+
+```bash
+git clone https://github.com/suresurya/SURYA-S-ARCH-LINUX-.git
+cd "SURYA-S-ARCH-LINUX-"
 ```
 
-The configuration is continuously customized around productivity, development, and everyday Linux usage.
+### Back up your existing config
 
----
-
-# 🎨 Customization
-
-This setup includes customization for:
-
-*  Arch Linux
-*  Hyprland
-*  Terminal
-*  Waybar
-*  Application launcher
-*  Wallpapers
-*  Lock screen
-*  GTK themes
-* 🖱 Cursor themes
-* 🔔 Notifications
-* 🖥 Display manager
-* ⌨ Keyboard shortcuts
-
----
-
-# 🧰 Tools & Applications
-
-Some of the tools used in this environment include:
-
-```text
-Git
-GitHub
-Git Bash
-Neovim
-VS Code
-Kitty
-Waybar
-Rofi
-Hyprland
-SDDM
-awww
-btop
-fastfetch
-bat
-ripgrep
-fzf
+```bash
+cp -a ~/.config ~/.config.backup
+cp -a ~/.zshrc ~/.zshrc.backup
 ```
 
-The list will continue to grow as new tools become part of the setup.
+### Copy only what you need
+
+Examples:
+
+```bash
+cp -a .zshrc ~/
+cp -a btop ~/.config/
+cp -a cava ~/.config/
+```
+
+Do not blindly copy everything into your system. Some configuration choices may depend on installed packages, terminal support, fonts, or audio stack setup.
 
 ---
 
-# 📦 Package Management
+## Package Notes
 
-Packages are managed primarily through:
+This setup assumes a typical Arch Linux workflow using:
 
 ```bash
 pacman
 ```
 
-and, when required:
+and optionally:
 
 ```bash
 yay
 ```
 
-Example:
+You may need packages such as:
+- `zsh`
+- `oh-my-zsh`
+- `powerlevel10k`
+- `btop`
+- `cava`
+- `neovim`
 
-```bash
-sudo pacman -S package-name
-```
-
-AUR packages:
-
-```bash
-yay -S package-name
-```
+Exact installation steps may vary depending on how your system is already configured.
 
 ---
 
-# 🔧 Installation
+## Philosophy
 
-This repository is primarily a **personal configuration archive**.
-
-If you want to use parts of it on another Arch Linux installation:
-
-### 1. Clone
-
-```bash
-git clone https://github.com/suresurya/SURYA-S-ARCH-LINUX-.git
-```
-
-### 2. Enter the repository
-
-```bash
-cd SURYA-S-ARCH-LINUX-
-```
-
-### 3. Back up your existing configuration
-
-```bash
-cp -a ~/.config ~/.config.backup
-```
-
-### 4. Copy the required configuration
-
-For example:
-
-```bash
-cp -a hypr ~/.config/
-```
-
-Do not blindly copy the entire repository. Some configurations are specific to my hardware, display setup, paths, or installed applications.
+The main goals of this setup are:
+- keep things simple
+- keep things fast
+- prefer keyboard-driven workflows
+- make the environment comfortable and personal
+- improve gradually instead of overengineering everything at once
 
 ---
 
-# 🔄 Updating the Repository
+## Roadmap
 
-This repository is updated continuously.
-
-Typical workflow:
-
-```bash
-cd ~/SURYA'S\ ARCH\ LINUX
-```
-
-Add changes:
-
-```bash
-git add .
-```
-
-Commit:
-
-```bash
-git commit -m "Update configuration"
-```
-
-Push:
-
-```bash
-git push
-```
+Planned improvements:
+- [ ] organize more dotfiles into the repository
+- [ ] add Hyprland-related configs if/when tracked here
+- [ ] improve documentation for each config
+- [ ] add screenshots
+- [ ] add setup notes for fresh installs
+- [ ] make the repository more reproducible
 
 ---
 
-# 🗂️ Configuration Philosophy
-
-This setup follows a few simple principles:
-
-### ⚡ Performance
-
-Keep unnecessary services and applications to a minimum.
-
-### 🎯 Productivity
-
-Use keyboard-driven workflows wherever practical.
-
-### 🎨 Customization
-
-Make the environment look and feel personal.
-
-### 🧩 Modularity
-
-Keep different applications and components separated into their own configurations.
-
-### 🔐 Safety
+## Safety Reminder
 
 Never commit:
-
-```text
-Passwords
-API keys
-Private keys
-Tokens
-Secrets
-Personal credentials
-```
+- passwords
+- API keys
+- private keys
+- tokens
+- personal secrets
 
 ---
 
-# 📸 Screenshots
+## Why This Repository Exists
 
-Screenshots of the current desktop setup will be added here as the configuration evolves.
+This repository is a snapshot of how I build and maintain my Arch Linux environment.
 
-```text
-Coming soon...
-```
+It helps me document what I use, keep backups of important configuration files, and steadily improve my Linux setup over time.
 
 ---
 
-# 🚧 Current Status
+## Author
 
-```text
-[████████████████░░░░] 80%
-```
-
-This repository is **actively evolving**.
-
-Things are still being configured, improved, redesigned, and occasionally broken.
-
-That's part of the process.
-
----
-
-# 🛠️ Roadmap
-
-* [x] Arch Linux base setup
-* [x] Hyprland setup
-* [x] SDDM customization
-* [x] Waybar setup
-* [x] Wallpaper system
-* [x] Terminal customization
-* [ ] Organize all dotfiles
-* [ ] Add installation scripts
-* [ ] Add package list
-* [ ] Add system setup script
-* [ ] Add screenshots
-* [ ] Improve documentation
-* [ ] Make setup reproducible
-* [ ] Create automated backup/update workflow
-
----
-
-# 📚 Why This Repository Exists
-
-This repository is more than a collection of configuration files.
-
-It is a record of my **Linux learning journey**.
-
-Every configuration, customization, script, and fix represents something I experimented with while building my own Arch Linux environment.
-
-The goal is to eventually turn this into a clean, documented, reproducible Arch Linux setup.
-
----
-
-# 👨‍💻 Author
-
-**Surya**
-
-Computer Science & Engineering Student
+**Surya**  
+Computer Science & Engineering Student  
 Arch Linux • Linux • Programming • Open Source
 
 ---
 
-# ⭐ If You Find This Useful
+## License
 
-Feel free to explore the configuration and take inspiration from anything that helps your own setup.
+These are personal configuration files shared for learning and inspiration.
 
-**Built with Arch. Configured by hand. Continuously improving.**
-
-```text
-        
-   KEEP LEARNING.
-   KEEP BUILDING.
-   KEEP BREAKING.
-   KEEP FIXING.
-```
-
----
-
-## 📜 License
-
-This repository contains personal configuration files.
-
-You are free to study, modify, and adapt the configurations for your own setup.
+Feel free to study, adapt, and modify them for your own setup.
