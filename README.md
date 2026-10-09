@@ -1,8 +1,14 @@
+<p align="center">
+  <img width="320" height="180" alt="i-use-arch-btw-arch-linux" src="https://github.com/user-attachments/assets/ca754320-4fe7-4798-b05c-e46a949aa8ba" />
+</p>
+
 # SURYA'S ARCH LINUX
 
 > My personal Arch Linux configuration repository.
 
 This repository contains the configuration files I use to shape my Arch Linux environment. It currently focuses on shell and terminal tooling, with room to expand over time as more parts of my setup are organized and tracked here.
+
+<img width="112" height="112" alt="archpepe" src="https://github.com/user-attachments/assets/eb2a93e7-1932-47ae-a91b-426e3f34c5bd" />
 
 ---
 
@@ -198,4 +204,28 @@ Arch Linux • Linux • Programming • Open Source
 
 These are personal configuration files shared for learning and inspiration.
 
+<<<<<<< HEAD
 Feel free to study, adapt, and modify them for your own setup.
+=======
+**Built with Arch. Configured by hand. Continuously improving.**
+
+```text
+        
+   KEEP LEARNING.
+   KEEP BUILDING.
+   KEEP BREAKING.
+   KEEP FIXING.
+```
+
+---
+
+## 📜 License
+
+This repository contains personal configuration files.
+
+You are free to study, modify, and adapt the configurations for your own setup.
+
+
+<img width="498" height="373" alt="linus-linus-benedict-torvalds" src="https://github.com/user-attachments/assets/3036bf00-2150-4593-9f4c-fcce997a014c" />
+
+>>>>>>> 7bcfb7f06c5081e465c1919acd09d906eb0eccc5
